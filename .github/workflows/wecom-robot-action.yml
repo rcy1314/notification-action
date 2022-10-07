@@ -1,16 +1,19 @@
-name: 'wecom/wechat-work robot notification action'
+name: wecom/wechat-work robot notification action
 
+ on:
+  schedule:
+    - cron: '0 0 * * *'
 
 
 jobs:
-  build:
+  bot:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+         - uses: actions/checkout@v2
       - name: wecom robot action
-        uses: guangzhengli/wecom-notification-action@main
-        with:
+         - uses: rcy1314/notification-action@main
+        env:
           webhook: ${{ secrets.WECOM_WEBHOOK_KEY}}
           is_at_all: "false"
           type: "message"
