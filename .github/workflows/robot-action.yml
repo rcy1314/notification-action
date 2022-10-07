@@ -1,4 +1,4 @@
-name: robot-action
+name: 'robot-action'
 
 on:
   watch:
