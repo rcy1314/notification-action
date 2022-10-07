@@ -20,8 +20,3 @@ jobs:
           file_name: "members.txt"
           file_read_type: "first"
           file_write_type: "loop"
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
