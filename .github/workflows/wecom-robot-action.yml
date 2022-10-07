@@ -13,7 +13,7 @@ jobs:
       - name: wecom robot action
         uses: rcy1314/notification-action@main
         with:
-          webhook: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=c898146b-a695-4d20-aeef-95e0c9c4c33f
+          webhook: ${{ secrets.WECOM_WEBHOOK_KEY}}
           is_at_all: "false"
           type: "message"
           message: "每日问好：愿岁月静好，每日笑口常开"
