@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: wecom robot action
-        uses: guangzhengli/wecom-notification-action@main
+        uses: rcy1314/notification-action@main
         with:
           webhook: ${{ secrets.WECOM_WEBHOOK_KEY}}
           is_at_all: "false"
