@@ -17,3 +17,7 @@ jobs:
           is_at_all: "false"
           type: "message"
           message: "每日问好：愿岁月静好，每日笑口常开"
+          type: "file"
+          file_name: "members.txt"
+          file_read_type: "first"
+          file_write_type: "loop"
