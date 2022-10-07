@@ -1,8 +1,6 @@
 name: 'wecom/wechat-work robot notification action'
 
 on:
-  watch:
-    types: [started]
   schedule:
     - cron: '5 0 * * *'
 
@@ -14,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: wecom robot action
-        uses: rcy1314/notification-action@main
+        uses: guangzhengli/wecom-notification-action@main
         with:
           webhook: ${{ secrets.WECOM_WEBHOOK_KEY}}
           is_at_all: "false"
