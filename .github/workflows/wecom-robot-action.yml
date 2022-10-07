@@ -9,6 +9,9 @@ bot:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v1
         with:
+          node-version: '12'
+      - run: npm install
+       env:
           webhook: ${{ secrets.WECOM_WEBHOOK_KEY}}
           is_at_all: "false"
           type: "message"
