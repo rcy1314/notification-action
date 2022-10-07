@@ -1,10 +1,9 @@
-name: 'robot-action'
+name: wecom/wechat-work robot notification action
 
-on:
-  watch:
-    types: [started]
+ on:
   schedule:
-    - cron: '5 0 * * *'
+    - cron: '0 0 * * *'
+
 
 jobs:
   build:
