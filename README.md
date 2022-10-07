@@ -23,7 +23,7 @@ jobs:
       - name: wecom robot action
         uses: guangzhengli/wecom-notification-action@main
         with:
-          webhook: ${{ secrets.WECOM_WEBHOOK_KEY}}
+          webhook: ${{ secrets.WECOM_WEBHOOK_KEY }}
           is_at_all: "false"
           type: "message"
           message: "test content"
@@ -57,7 +57,7 @@ jobs:
       - name: wecom robot action
         uses: guangzhengli/wecom-notification-action@main
         with:
-          webhook: ${{ secrets.WECOM_WEBHOOK_KEY}}
+          webhook: ${{ secrets.WECOM_WEBHOOK_KEY }}
           is_at_all: "false"
           type: "file"
           file_name: "members.txt"
