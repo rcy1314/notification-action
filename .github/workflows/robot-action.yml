@@ -1,4 +1,4 @@
-name: wecom/wechat-work robot notification action
+name: 'robot-action'
 
 on:
   watch:
