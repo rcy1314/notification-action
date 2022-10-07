@@ -3,14 +3,14 @@ on:
   schedule:
     - cron: '5 0 * * *'
     
-bot:
+  bot:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: wecom robot action
-        uses: guangzhengli/wecom-notification-action@main
-       env:
+      - name: notification-action
+        uses: rcy1314/notification-action@main
+        with:
           webhook: ${{ secrets.WECOM_WEBHOOK_KEY}}
           is_at_all: "false"
           type: "message"
