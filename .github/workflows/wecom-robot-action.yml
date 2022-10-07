@@ -2,7 +2,7 @@ name: wecom/wechat-work robot notification action
 
 on:
   schedule:
-    - cron:  '0 0 * * *'
+    - cron: '0 0 * * *'
 
 jobs:
   build:
