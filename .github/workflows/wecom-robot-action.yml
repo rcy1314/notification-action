@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: notification-action
-        uses: rcy1314/notification-action@v2
+        uses: rcy1314/notification-action
       - name: notification-action
-        uses: rcy1314/notification-action@main
+        uses: rcy1314/notification-action
         with:
           webhook: ${{ secrets.WECOM_WEBHOOK_KEY }}
           is_at_all: "false"
