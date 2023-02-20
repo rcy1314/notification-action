@@ -2,13 +2,15 @@ name: 'wechat-work'
 on:
   schedule:
     - cron: '5 0 * * *'
+  branches:
+    - main
  
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: notification-action
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: notification-action
         uses: guangzhengli/wecom-notification-action@main
         with:
