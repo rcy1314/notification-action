@@ -15,4 +15,4 @@ jobs:
           webhook: ${{ secrets.WECOM_WEBHOOK_KEY }}
           is_at_all: "false"
           type: "message"
-          message: "每日问好：愿岁月静好，每日笑口常开"
+          message: "每日公告：主页：www.noisework.cn，主页包含导航及公共服务，群组设有自动化信息推送，如过多打扰可关闭通知，如需更换推送请联系管理，祝您每天都有好心情！，"
