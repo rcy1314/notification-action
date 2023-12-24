@@ -1,22 +1,40 @@
 name: 'wechat-work'
-on:
+于:
   push:
-    branches:
+    分支:
       - main
   schedule:
-    - cron: '5 0 * * *'
+    - cron: '5 1 * * *'  # 按上海时区设定时间
 
- 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
       - name: notification-action
         uses: actions/checkout@v3
       - name: notification-action
-        uses: guangzhengli/wecom-notification-action@main
-        with:
-          webhook: ${{ secrets.WECOM_WEBHOOK_KEY }}
+        run: |
+          pip install pytz
+          python - <<EOF
+          import datetime
+          import pytz
+
+          # 获取当前时间
+          current_time = datetime.datetime.now()
+
+          # 设置上海时区
+          shanghai_tz = pytz.timezone('Asia/Shanghai')
+          shanghai_time = current_time.astimezone(shanghai_tz)
+
+          # 打印上海时间
+          print('上海时间:', shanghai_time.strftime('%Y-%m-%d %H:%M:%S'))
+          EOF
+        env:
+          WECOM_WEBHOOK_KEY: ${{ secrets.WECOM_WEBHOOK_KEY }}
           is_at_all: "false"
           type: "message"
           message: "每日公告：主页：www.noisework.cn，主页包含导航及公共服务，群组设有自动化信息推送，如过多打扰可关闭通知，如需更换推送请联系管理，祝您每天都有好心情！"
