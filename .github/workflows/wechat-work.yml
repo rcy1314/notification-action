@@ -1,7 +1,7 @@
 name: 'wechat-work'
-于:
+on:
   push:
-    分支:
+    branches:
       - main
   schedule:
     - cron: '5 1 * * *'  # 按上海时区设定时间
