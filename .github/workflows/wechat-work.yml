@@ -5,6 +5,7 @@ name: 'wechat-work'
       - main
   schedule:
     - cron: '5 1 * * *'  # 按上海时区设定时间
+  workflow_dispatch:  # 添加手动运行触发器
 
 jobs:
   build:
